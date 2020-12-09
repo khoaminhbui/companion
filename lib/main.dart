@@ -14,6 +14,17 @@ class MyApp extends StatelessWidget {
           primarySwatch: Colors.blueGrey,
           visualDensity: VisualDensity.adaptivePlatformDensity,
         ),
-        home: Scaffold(appBar: AppBar(title: Text("Companion"))));
+        home: Scaffold(
+          appBar: AppBar(title: Text("Companion")),
+          body: Center(
+            child: Text(""),
+          ),
+          bottomNavigationBar:
+              BottomNavigationBar(items: const <BottomNavigationBarItem>[
+            BottomNavigationBarItem(icon: Icon(Icons.home), label: "Home"),
+            BottomNavigationBarItem(
+                icon: Icon(Icons.account_circle_outlined), label: "Account")
+          ]),
+        ));
   }
 }
